@@ -1,0 +1,20 @@
+<h1>Analytics</h1>
+
+<% @urls.each do |url| %>
+    <b><%= url.url %></b>
+    </br>
+    <% if url.url_valid? %>
+      <%= link_to "https://short.com/#{url.short_url}", {:controller => :urls, :action => :clicked, :url_id => url.id}, :remote => :true %>
+    <% else %>
+      <%= link_to "https://short.com/#{url.short_url}", {:controller => :urls, :action => :clicked, :url_id => url.id} %>
+    <% end %>
+    </br>
+    <div id="click_count_section_url_<%= url.id %>">
+      <%= render partial: 'click_count', locals: {link: url} %>
+    </div>
+    <hr>
+<% end %>
+  
+<%= link_to 'Create another short URL', '/' %>
+
+

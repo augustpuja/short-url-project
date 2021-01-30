@@ -1,0 +1,6 @@
+<h5>Here's your Short URL!</h5>
+
+<% unless link.nil? %>
+  <%= link_to "https://short.com/#{link.short_url}", {:controller => :urls, :action => :clicked, :url_id => link.id}, :remote => :true %>
+  <hr>
+<% end %>

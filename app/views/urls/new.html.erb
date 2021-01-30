@@ -1,0 +1,14 @@
+<h1>Welcome to short.com</h1>
+
+<%= form_for :url, url: urls_path, method: :post, :remote => true, :html => {:id => 'ShortenedForm'} do |form|%>
+  <%= form.label :url, "Please enter your URL here:" %>
+  <%= form.text_field :url %>
+  <%= form.submit "Shorten" %>
+  <div id="errorDiv"></div>
+<%end%>
+
+<div class="short_link_section"></div>
+
+
+<%= link_to 'Analytics List', stats_path %>
+

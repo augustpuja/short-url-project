@@ -1,0 +1,2 @@
+$("#click_count_section_url_<%= @url.id %>").html("<%= escape_javascript(render :partial => 'click_count', locals: {link: @url}) %>");
+window.open("<%= j @url.url %>");

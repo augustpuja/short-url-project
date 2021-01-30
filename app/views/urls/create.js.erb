@@ -1,0 +1,8 @@
+<% if @url.errors.any? %>
+  $("#errorDiv").innerHTML = "";
+  $("#errorDiv").html('<%= escape_javascript(render :partial => "shared/error_message", object: @url) %>');
+
+<% else %>
+  $(".short_link_section").html("<%= escape_javascript(render :partial => 'display_url', locals: {link: @url}) %>");
+
+<% end %>
