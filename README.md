@@ -19,7 +19,9 @@ https://paper.dropbox.com/doc/Build-a-URL-shortener-BdG2JwuLz5jG4ke1kf4Ye
 2. Change into directory: `cd short-url-project`
 3. Install gems: `bundle install`
 4. Install JavaScript packages: `yarn install`
-5. Start the server: `rails s`
-6. Run Integration test: `rails test`
+5. Setup database: `rails db:setup`
+6. Start the server: `rails s`
 7. Visit http://localhost:3000/
+8. Run Integration test: `rails test`
+
 
